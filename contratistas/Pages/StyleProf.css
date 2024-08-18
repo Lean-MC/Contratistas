@@ -1,0 +1,370 @@
+/* Estilo general */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+    list-style: none;
+  }
+  
+  .header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 4px 20px hsla(207, 24%, 35%, 0.1);
+    background-color: #151418;
+    z-index: 1;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+  }
+  
+  .logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .logo a span {
+    color: #8739fa;
+  }
+  
+  .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .menu a {
+    display: block;
+    padding: 7px 15px;
+    font-size: 17px;
+    font-weight: 500;
+    transition: 0.2s all ease-in-out;
+    color: #fff;
+  }
+  
+  .menu:hover a {
+    opacity: 0.4;
+  }
+  
+  .menu a:hover {
+    opacity: 1;
+    color: #fff;
+  }
+  
+  .menu-icon {
+    display: none;
+  }
+  
+  #menu-toggle {
+    display: none;
+  }
+  
+  #menu-toggle:checked ~ .menu {
+    transform: scale(1, 1);
+  }
+
+  /* Estilo del menú desplegable */
+.menu .dropdown {
+  position: relative;
+}
+
+.menu .dropdown .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 4px;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.menu .dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  margin: 0;
+}
+
+.dropdown-menu a {
+  padding: 10px;
+  display: block;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f0f0f0;
+}
+
+/* Estilos del contenido principal */
+
+.container-main {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto; /* Centrará horizontalmente */
+  margin-top: 1%;
+  text-align: center;
+}
+
+.container-main section{
+  margin: 20px;
+}
+
+/* Estilos de la galería */
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.gallery-grid img {
+    width: calc(33.333% - 10px);
+    height: auto;
+    border-radius: 5px;
+}
+
+
+.info {
+  display: flex;
+  justify-content: space-between; /* Espacio entre los elementos */
+  gap: 5px; /* Espacio entre los contenedores, ajusta según sea necesario */
+  flex-wrap: wrap; /* Permite que los contenedores se envuelvan si no caben en una línea */
+}
+
+/* Opcional: Ajusta el ancho de los contenedores internos si es necesario */
+.container {
+  flex: 1; /* Permite que los contenedores crezcan y se ajusten */
+  min-width: 300px; /* Asegura que los contenedores no sean demasiado estrechos */
+  padding: 10px; /* Espaciado interno */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Opcional: añade sombra para un efecto visual */
+}
+
+/* Estilos para el título */
+.container-info h2 {
+  margin-bottom: 15px; /* Espacio debajo del título */
+}
+
+/* Estilos para la lista */
+ul {
+  padding-left: 20px; /* Espacio a la izquierda para los puntos */
+  text-align: start; /* Alineación del texto de la lista */
+  margin: 0; /* Elimina el margen por defecto de la lista */
+}
+
+/* Estilos para los elementos de la lista */
+li {
+  margin-bottom: 10px; /* Espacio entre los elementos de la lista */
+  list-style-type: disc; /* Asegura que se muestren los puntos como viñetas */
+
+}
+
+/* Estilos para las redes sociales */
+
+/* Espacios alrededor del título */
+.container h2 {
+  margin-bottom: 10px; /* Espacio debajo del título */
+  font-size: 24px; /* Tamaño del texto del título */
+  font-weight: bold; /* Negrita para el título */
+}
+
+/* Espacios alrededor del párrafo */
+.container p {
+  margin-bottom: 10px; /* Espacio debajo del párrafo */
+  line-height: 1.6; /* Altura de línea para mejorar la legibilidad */
+  font-size: 16px; /* Tamaño del texto del párrafo */
+  color: #333; /* Color del texto del párrafo */
+}
+
+/* Estilo general para el contenedor de botones */
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilo de los botones de redes sociales */
+.social-btn {
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  font-family: 'Titillium Web', sans-serif;
+  color: #333;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+  background: white;
+  margin: 5px;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-btn svg {
+  height: 24px;
+  width: 24px;
+}
+
+/* Estilo para el texto al lado del ícono */
+.social-btn span {
+  width: 0;
+  overflow: hidden;
+  transition: 0.3s;
+  text-align: center;
+  margin-left: 5px;
+  white-space: nowrap; /* Evita el salto de línea en el texto */
+}
+
+/* Efecto de expansión al pasar el cursor */
+.social-btn:hover {
+  width: 150px;
+  border-radius: 5px;
+}
+
+.social-btn:hover span {
+  padding: 2px;
+  width: 80px;
+}
+
+/* Colores de los íconos */
+.whatsapp i {
+  color: #25d366; /* Color blanco para el ícono de WhatsApp */
+}
+
+.instagram i {
+  color: #e4405f; /* Color blanco para el ícono de Instagram */
+}
+
+.call i {
+  color: #3a12ca; /* Color blanco para el ícono de llamada */
+}
+
+
+
+/* Estilo para el footer */
+footer {
+    padding: 20px;
+    background-color: #f1f1f1;
+    text-align: center;
+    margin-top: 20px; /* Espacio entre el main y el footer */
+}
+
+footer p {
+    margin: 5px 0; /* Espacio entre las líneas de texto */
+    color: #333; /* Color del texto */
+}
+
+footer a {
+    color: #007bff; /* Color del enlace */
+    text-decoration: none; /* Quitar subrayado del enlace */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Subrayar enlace al pasar el ratón */
+}
+
+ 
+@media only screen and (max-width: 950px) {
+  .menu {
+    flex-direction: column;
+    background-color: #151418;
+    align-items: start;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    max-height: 0; /* Inicia el menú cerrado */
+    overflow: hidden; /* Oculta el contenido que excede la altura */
+    transition: max-height 0.5s ease-in-out; /* Suaviza la transición de altura */
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  }
+
+  #menu-toggle:checked ~ .menu {
+    max-height: 500px; /* Ajusta la altura para que muestre todo el contenido */
+  }
+
+  .menu a {
+    margin-left: 12px;
+  }
+
+  .menu li {
+    margin-bottom: 10px;
+  }
+
+  .menu-icon {
+    display: block;
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
+  }
+}
+
+/* Media Queries para diseño móvil */
+@media (max-width: 768px) {
+  .container-main {
+    width: 90%; /* Puedes ajustar el ancho según tus necesidades */
+    max-width: 600px; /* Ajusta el ancho máximo si es necesario */
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto; /* Centrará horizontalmente */
+    text-align: center; /* Centrará el texto y otros elementos en el centro */
+    padding: 10px; /* Agrega algo de padding para el diseño móvil */
+  }
+
+  h2 {
+      font-size: 20px;
+  }
+
+  p {
+      font-size: 14px;
+  }
+
+  .gallery-grid {
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+
+  .social-btn {
+      width: 80px;
+      font-size: 12px;
+  }
+  
+}
+
+@media (max-width: 480px) {
+  .container-main {
+      padding: 10px;
+  }
+
+  h2 {
+      font-size: 18px;
+  }
+
+  p {
+      font-size: 12px;
+  }
+
+  .gallery-grid {
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+
+  .social-btn {
+      width: 70px;
+      font-size: 10px;
+  }
+
+  .social-btn i {
+      font-size: 18px;
+  }
+}
+

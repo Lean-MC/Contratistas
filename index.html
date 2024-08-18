@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylePrincipal.css">
+    <title>SoloProf</title>
+</head>
+<body>
+
+    <div id="nav-placeholder"></div>
+
+   <!-- Contenedor del filtro -->
+   <div class="filter-container">
+    <label for="specialist-filter">Filtrar especialistas:</label>
+    <select id="specialist-filter" class="form-select" aria-label="Seleccionar especialista">
+        <option value="all">Todos</option>
+        <option value="electricista">Electricistas</option>
+        <option value="arreglos-varios">Arreglos Generales</option>
+        <!-- Agrega más opciones según tus categorías -->
+    </select>
+</div>
+
+    <!-- Contenido principal -->
+    <main>
+        <section class="services">
+            <!-- Ejemplo de tarjeta -->
+            <div class="card electricista">
+                <div class="card__img">
+                    <img src="contratistas/imgFondo/1.png" alt="Card Image">
+                </div>
+                <div class="card__avatar">
+                    <img src="contratistas/avatar/electricistaJuanCarlosAvatar.png" alt="Avatar">
+                </div>
+                <div class="card__title">Juan Carlos</div>
+                <div class="card__subtitle">Electricista</div>
+                <button class="card__btn"><a href="contratistas/Pages/JuanCarlos.html">Contactar</a></button>
+            </div>
+
+            <!-- Ejemplo de tarjeta -->
+            <div class="card electricista">
+                <div class="card__img">
+                    <img src="contratistas/imgFondo/1.png" alt="Card Image">
+                </div>
+                <div class="card__avatar">
+                    <img src="contratistas/avatar/electricistaJuanCarlosAvatar.png" alt="Avatar">
+                </div>
+                <div class="card__title">Juan Carlos</div>
+                <div class="card__subtitle">Electricista</div>
+                <button class="card__btn"><a href="contratistas/Pages/JuanCarlos.html">Contactar</a></button>
+            </div>
+
+            <!-- Ejemplo de tarjeta -->
+            <div class="card arreglos-varios">
+                <div class="card__img">
+                    <img src="contratistas/imgFondo/1.png" alt="Card Image">
+                </div>
+                <div class="card__avatar">
+                    <img src="contratistas/avatar/electricistaJuanCarlosAvatar.png" alt="Avatar">
+                </div>
+                <div class="card__title">Juan Carlos</div>
+                <div class="card__subtitle">Arreglos varios</div>
+                <button class="card__btn"><a href="contratistas/Pages/JuanCarlos.html">Contactar</a></button>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <!-- Si tienes un archivo JavaScript -->
+    <script src="/scripts/carga.js"></script>
+    <script src="/scripts/filtro.js"></script>
+</body>
+</html>
