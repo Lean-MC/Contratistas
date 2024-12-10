@@ -28,20 +28,29 @@
 
     <section class="about">
         <div class="container">
-            <h2>Sobre Juan Carlos</h2>
-            <p>Juan Carlos es un electricista con años de experiencia en el sector. Ofrece una amplia gama de servicios relacionados con la electricidad, incluyendo instalaciones, reparaciones y mantenimiento. Su compromiso con la calidad y la satisfacción del cliente lo distinguen en su campo.</p>
+            <h2>Sobre Este Profesional</h2>
+            <p> electricista con una reputación que resplandece tanto como sus conexiones perfectas. Con una experiencia de más de 15 años en el oficio, Manuel combina conocimientos técnicos avanzados con un enfoque práctico y meticuloso que garantiza la seguridad y eficiencia en cada trabajo que realiza.</p>
         </div>
     </section>
 
     <section class="gallery">
         <div class="container">
             <h2>Galería de Trabajos</h2>
-            <div class="gallery-grid">
-                <img src="/contratistas/imagenes/1.jfif" alt="Trabajo eléctrico 1">
-                <img src="/contratistas/imagenes/2.jfif" alt="Trabajo eléctrico 1">
-                <img src="/contratistas/imagenes/3.jfif" alt="Trabajo eléctrico 1">
-                <img src="/contratistas/imagenes/4.jfif" alt="Trabajo eléctrico 1">
-                <img src="/contratistas/imagenes/5.jfif" alt="Trabajo eléctrico 1">
+            <div class="galeria">
+                <div class="galeria-large">
+                    <img src="/contratistas/imagenes/1.jfif" alt="Imagen Grande" id="largeImage">
+                </div>
+                <div class="galeria-small">
+                    <img src="/contratistas/imagenes/2.jfif" alt="Imagen 1" class="smallImage">
+                    <img src="/contratistas/imagenes/3.jfif" class="smallImage">
+                    <img src="/contratistas/imagenes/4.jfif" class="smallImage">
+                    <img src="/contratistas/imagenes/5.jfif" class="smallImage">
+                    <img src="/contratistas/imagenes/6.jfif" class="smallImage">
+                    <img src="/contratistas/imagenes/7.jfif" class="smallImage">
+                    <img src="/contratistas/imagenes/8.jfif" class="smallImage">
+                    <img src="/contratistas/imagenes/1.jfif" class="smallImage">
+                </div>
+            </div>
 
                 <!-- Agrega más imágenes según sea necesario -->
             </div>
@@ -87,7 +96,41 @@
     <p>&copy; 2024 Your Company. All rights reserved.</p>
     <p><a href="#">Legal Information</a></p>
 </footer>
+<script> 
+    function handleImageClick() {
+    // Obtener todas las imágenes pequeñas
+    document.querySelectorAll('.smallImage').forEach(image => {
+        image.addEventListener('click', function() {
+            // Obtener la imagen grande y su src
+            const largeImage = document.getElementById('largeImage');
+            const largeImageSrc = largeImage.src;
 
+            // Intercambiar el src de la imagen grande con la imagen pequeña clicada
+            largeImage.src = this.src;
+            this.src = largeImageSrc;
+        });
+    });
+}
+
+// Función para activar/desactivar el JavaScript basado en el tamaño de la pantalla
+function checkScreenWidth() {
+    if (window.innerWidth > 468) {
+        handleImageClick(); // Activar funcionalidad si la pantalla es mayor a 768px
+    }
+}
+
+// Ejecutar la función al cargar la página y al cambiar el tamaño de la ventana
+checkScreenWidth();
+window.addEventListener('resize', function() {
+    // Elimina todos los event listeners antes de volver a agregarlos si es necesario
+    document.querySelectorAll('.smallImage').forEach(image => {
+        const newImage = image.cloneNode(true); // Clonar la imagen para eliminar listeners previos
+        image.replaceWith(newImage); // Reemplazarla en el DOM
+    });
+
+    checkScreenWidth(); // Verificar el tamaño de la pantalla nuevamente
+});
+</script>
     
 </body>
 </html>

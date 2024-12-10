@@ -121,18 +121,83 @@
   margin: 20px;
 }
 
-/* Estilos de la galería */
-.gallery-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
+.gallery{
+  display: flex;
+  flex-direction: column; /* Para centrar los elementos en el eje vertical */
+  justify-content: center;
+  align-items: center;
+}
+.galeria {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1px;
+  max-width: 800px;
+  height: 400px;
+  margin-bottom: 20px; /* Espacio inferior entre la galería y el video */
+  margin-top: 20px; /* Espacio inferior entre la galería y el video */
 }
 
-.gallery-grid img {
-    width: calc(33.333% - 10px);
-    height: auto;
-    border-radius: 5px;
+.galeria-large {
+  position: relative;
 }
+
+.galeria-large img {
+  width: 400px;
+  height: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2px;
+}
+
+.galeria-small {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+  gap: 1px;
+}
+
+.galeria-small img {
+  width: 95px;
+  height: 95px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.galeria-small img:hover {
+  transform: scale(1.05);
+}
+
+/* Contenedor de la galería de videos */
+.video-gallery {
+  display: flex; /* Usar flexbox para disposición en fila o columna */
+  gap: 20px; /* Espacio entre los videos */
+  justify-content: center; /* Centrar los videos horizontalmente */
+  padding: 20px; /* Espacio alrededor del contenedor */
+  margin: 20px; /* Espacio alrededor del contenedor */
+  width: 80%;
+  height: 300px;
+}
+
+.video-container {
+  width: 80%;
+  max-width: 600px;
+  height: 300px; /* Asegúrate de que el contenedor tenga suficiente altura */
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #000;
+  margin: 20px;
+  display: flex; /* Centrar el video dentro del contenedor */
+  justify-content: center;
+  align-items: center;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* O 'contain' si prefieres mantener la proporción */
+}
+
 
 
 .info {
@@ -357,6 +422,31 @@ footer a:hover {
   .gallery-grid {
       grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   }
+
+  .galeria {
+    width: 100%;
+    height: 100%;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.galeria-large img {
+   display: none;
+}
+.galeria-small {
+    grid-template-columns: 1fr; /* Una columna para las imágenes pequeñas en pantallas muy pequeñas */
+    grid-template-rows: none;
+    gap: 5px;
+}
+.galeria-small img {
+    width: 90%;
+    height: 300px;
+    margin: 0 auto;
+    padding: 10px;
+}
 
   .social-btn {
       width: 70px;
