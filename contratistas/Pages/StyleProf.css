@@ -33,6 +33,11 @@
   .logo a span {
     color: #8739fa;
   }
+
+  .logo img {
+    max-width: 150px; /* Ajusta el tamaño máximo del logo */
+    height: 10%; /* Mantiene la proporción de la imagen */
+  }
   
   .menu {
     display: flex;
@@ -316,26 +321,31 @@ li {
 
 
 
-/* Estilo para el footer */
+/* Estilo del footer */
 footer {
-    padding: 20px;
-    background-color: #f1f1f1;
-    text-align: center;
-    margin-top: 20px; /* Espacio entre el main y el footer */
+  padding: 20px;
+  background-color: black;
+  text-align: center;
+  margin-top: auto;
+  color: white;
 }
 
 footer p {
-    margin: 5px 0; /* Espacio entre las líneas de texto */
-    color: #333; /* Color del texto */
+  margin: 5px 0;
+  color: white;
 }
 
 footer a {
-    color: #007bff; /* Color del enlace */
-    text-decoration: none; /* Quitar subrayado del enlace */
+  color: #007bff;
+  text-decoration: none;
 }
 
 footer a:hover {
-    text-decoration: underline; /* Subrayar enlace al pasar el ratón */
+  text-decoration: underline;
+}
+
+footer span{
+  color: rgb(123, 3, 123);
 }
 
  
